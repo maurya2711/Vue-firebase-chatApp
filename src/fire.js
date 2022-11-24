@@ -5,13 +5,13 @@ import 'firebase/compat/firestore'
 import { ref, onUnmounted, computed } from 'vue'
 
 firebase.initializeApp({
-    apiKey: "AIzaSyBiVZku7eqkUbOqks-cxmEfx1hG7Ug1pKI",
-    authDomain: "vue-chat-app-48c0d.firebaseapp.com",
-    databaseURL: "https://vue-chat-app-48c0d-default-rtdb.firebaseio.com",
-    projectId: "vue-chat-app-48c0d",
-    storageBucket: "vue-chat-app-48c0d.appspot.com",
-    messagingSenderId: "487298230448",
-    appId: "1:487298230448:web:1660c92150bb394e1ab375"
+    apiKey: process.env.VUE_APP_API_KEY,
+    authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+    databaseURL: process.env.VUE_APP_DATABASE_URL,
+    projectId: process.env.VUE_APP_PROJECT_ID,
+    storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.VUE_APP_MESSAGE_SENDER_ID,
+    appId: process.env.VUE_APP_APP_ID,
 })
 
 const auth = firebase.auth()
